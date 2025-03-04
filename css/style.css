@@ -1,13 +1,16 @@
+
 #menuSidebar,#activity,#contMain{
     height: 100vh;
 }
 
 #menuSidebar,#activity{
-background-color: black;
+ background-color: #000;
 }
 
+#contMain{
+    background-color: #171717;
 
-
+}
 
 #contMenuMobile{
     position: absolute;
@@ -19,12 +22,15 @@ background-color: black;
     background-color: #171717;
 }
 
+
+
 #menuMobile{
     background-color: rgba(0, 0, 0, 0.594);
     font-size: 10px;
+    display: flex;
 }
 
-#menuMobile >* {
+#menuMobile > * {
     display: flex;
     flex-direction: column;
     align-items: center;
