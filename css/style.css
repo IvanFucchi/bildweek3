@@ -1,0 +1,53 @@
+#menuSidebar,#activity,#contMain{
+    height: 100vh;
+}
+
+#menuSidebar,#activity{
+background-color: black;
+}
+
+
+
+
+#contMenuMobile{
+    position: absolute;
+    bottom: 0;
+} 
+
+#barPlayback{
+    height: 50px;
+    background-color: #171717;
+}
+
+#menuMobile{
+    background-color: rgba(0, 0, 0, 0.594);
+    font-size: 10px;
+}
+
+#menuMobile >* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+#menuMobile i{
+    font-size: 20px;
+}
+#menuMobile p{
+    margin: 0;
+}
+
+@media (max-width: 430px) {
+    #menuSidebar, #activity{
+        display: none;
+    }
+
+}
+
+@media (min-width: 430px) {
+    #menuMobile{
+        display: none;
+    }
+}
