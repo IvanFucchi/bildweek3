@@ -19,6 +19,13 @@
     left: 20px;
 }
 
+.hero-overlay > h1 {
+    /* color: red; */
+    font-weight: bolder;
+    
+
+}
+
 /* Stile Tabella */
 .table {
     background-color: none;
@@ -39,4 +46,27 @@
 td {
     padding: 10px;
     vertical-align: middle;
+}
+
+.artist-logo {
+    border-radius: 50%;
+}
+
+ h2, h3, h4, h5 {
+    color: white;
+}
+
+#playBtn {
+    border-radius: 50%;
+}
+
+#followBtn {
+    border: solid;
+    border-color: white;
+    border-radius: 25%, 25%, 25%, 25%;
+    color: white;
+}
+
+#optionMenu {
+    color: white;
 }
