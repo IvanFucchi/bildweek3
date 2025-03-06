@@ -3,7 +3,7 @@ let artistData = {};
 let tracklistData = []; 
 
 
-const artistId = 2252; 
+const artistId = 1306; 
 
 
 const fetchArtistData = async (id) => {

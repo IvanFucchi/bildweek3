@@ -1,29 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita lo scrolling orizzontale */
+}
 
 .hero {
     position: relative;
     width: 100%;
-    height: 300px;
-    background: center/cover no-repeat;
+    height: 450px; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end; 
     justify-content: flex-start;
-    padding: 20px;
+    margin: 0;
+    top: 0;
 }
 
+
+
 .hero-overlay {
-    padding: 20px 30px;
+    margin: 0;
+    padding: 20px;
     border-radius: 10px;
     color: white;
     position: absolute;
     bottom: 20px;
     left: 20px;
-}
-
-.hero-overlay > h1 {
-    /* color: red; */
-    /* font-weight: bolder; */
-    
-
 }
 
 
@@ -50,6 +54,7 @@ td {
 
 .artist-logo {
     border-radius: 50%;
+    width: 70px;
 }
 
  h2, h3, h4, h5 {
@@ -58,15 +63,69 @@ td {
 
 #playBtn {
     border-radius: 50%;
+    background-color: #1fd760;
+    
+}
+
+.play-btn {
+    font-size: 2em;
+}
+
+.bi-play-fill {
+    color: black;
+    align-items: center;
+    justify-content: center;
+
 }
 
 #followBtn {
     border: solid;
-    border-color: white;
-    border-radius: 25%, 25%, 25%, 25%;
+    border-radius: 5%, 5%, 5%, 5%;
+    border: 1px solid white;
     color: white;
+    background-color: transparent;
+    padding: 10px 20px; /* Riduce l'altezza e aumenta la larghezza */
+    font-size: 12px;
+    font-weight: bolder;
+    height: 30px; /* Altezza più schiacciata */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
 }
 
 #optionMenu {
     color: white;
+}
+
+.table {
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    background-color: transparent !important;
+    border-collapse: collapse;
+}
+
+
+.table td {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 10px 0;
+}
+
+#contMain {
+    background: linear-gradient(to bottom,  
+        rgba(40, 40, 40, 1) 0%,   
+        rgba(20, 20, 20, 0.95) 30%,  
+        rgba(10, 10, 10, 0.98) 70%,  
+        rgba(5, 5, 5, 1) 100%  
+    );
+}
+
+.hero h1 {
+    font-size: 80px !important; 
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
