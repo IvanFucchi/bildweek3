@@ -120,6 +120,8 @@ td {
         rgba(10, 10, 10, 0.98) 70%,  
         rgba(5, 5, 5, 1) 100%  
     );
+    background-repeat: repeat;
+
 }
 
 .hero h1 {
@@ -129,3 +131,32 @@ td {
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
+.option-btn {
+    display: flex; /* Permette l'allineamento verticale */
+    align-items: center; /* Centra l'icona */
+    justify-content: center;
+    width: 40px; /* Larghezza simile agli altri pulsanti */
+    height: 40px; /* Altezza uguale agli altri pulsanti */
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+/* Rende i three-dots più grandi e grigi */
+.option-btn i {
+    margin-bottom: 12px;
+    font-size: 26px !important; /* Aumenta la dimensione */
+    color: rgba(200, 200, 200, 0.7) !important; /* Grigio chiaro */
+    transition: color 0.2s ease-in-out !important; /* Transizione fluida */
+}
+
+/* Effetto hover - Cambia colore in bianco */
+.option-btn:hover i {
+    color: white !important;
+}
+.option-btn i::before {
+    content: "⋅⋅⋅"; /* Usa puntini separati con spazi */
+    font-size: inherit; /* Mantiene la dimensione originale */
+}
+
+
