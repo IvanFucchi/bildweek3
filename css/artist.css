@@ -159,4 +159,15 @@ td {
     font-size: inherit; /* Mantiene la dimensione originale */
 }
 
+/* Assicura che le colonne non si restringano troppo su schermi medi */
+@media (max-width: 992px) {
+    .col-md-3, .col-md-7, .col-md-2 {
+        min-width: 100%; /* Rende le colonne a tutta larghezza quando il layout è più stretto */
+    }
+
+    #menuSidebar {
+        display: none; /* (Opzionale) Nasconde la sidebar su schermi medi */
+    }
+}
+
 
