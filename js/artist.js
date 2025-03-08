@@ -1,9 +1,9 @@
 
 let artistData = {};
-let tracklistData = []; 
+let tracklistData = [];
 
 
-const artistId = 1306; 
+const artistId = 763;
 
 
 const fetchArtistData = async (id) => {
@@ -12,14 +12,14 @@ const fetchArtistData = async (id) => {
         if (!response.ok) {
             throw new Error("Errore nel recupero dei dati dell'artista");
         }
-        artistData = await response.json(); 
+        artistData = await response.json();
         console.log("Dati dell'artista ricevuti:", artistData);
-        
-        
+
+
         fetchTracklist(artistData.tracklist);
-        
-        
-        renderArtistData(); 
+
+
+        renderArtistData();
     } catch (error) {
         console.error("Errore durante il fetch dell'artista:", error);
     }
@@ -33,10 +33,10 @@ const fetchTracklist = async (tracklistUrl) => {
             throw new Error("Errore nel recupero della tracklist");
         }
         const data = await response.json();
-        tracklistData = data.data; 
+        tracklistData = data.data;
         console.log("Top Tracce ricevute:", tracklistData);
 
-        
+
         renderTracklist();
     } catch (error) {
         console.error("Errore durante il fetch della tracklist:", error);
@@ -50,12 +50,12 @@ const renderArtistData = () => {
         return;
     }
 
-    
+
     document.querySelector(".hero").style.backgroundImage = `url(${artistData.picture_xl})`;
     document.querySelector(".hero h1").innerText = artistData.name;
     document.querySelector(".hero p").innerText = `${artistData.nb_fan.toLocaleString()} ascoltatori mensili`;
 
-    
+
     const artistLogo = document.querySelector(".artist-logo");
     if (artistLogo) {
         artistLogo.src = artistData.picture;
@@ -66,21 +66,34 @@ const renderArtistData = () => {
 
 const renderTracklist = () => {
     const trackList = document.querySelector(".table tbody");
-    trackList.innerHTML = ""; 
+    trackList.innerHTML = "";
 
-    tracklistData.slice(0, 5).forEach((track, index) => {
-        const row = `
-            <tr>
-                <td>${index + 1}</td>
-                <td><img src="${track.album.cover_small}" alt="Album Cover" class="album-cover"></td>
-                <td>${track.title}</td>
-                <td>#${track.id}</td>
-                <td>${Math.floor(track.duration / 60)}:${String(track.duration % 60).padStart(2, "0")}</td>
-            </tr>
+    tracklistData.slice(0, 20).forEach((track, index) => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td><img src="${track.album.cover_small}" alt="Album Cover" class="album-cover"></td>
+            <td>${track.title}</td>
+            <td>#${track.id}</td>
+            <td>${Math.floor(track.duration / 60)}:${String(track.duration % 60).padStart(2, "0")}</td>
         `;
-        trackList.innerHTML += row;
+
+        row.addEventListener("click", () => {
+            playTrack(track.preview);
+        });
+        trackList.appendChild(row);
     });
 };
+
+const playTrack = (trackUrl) => {
+    const audioPlayer = document.getElementById("audioPlayer");
+    const audioSource = document.getElementById("audioSource");
+
+    audioSource.src = trackUrl;
+    audioPlayer.load();
+    audioPlayer.play()
+}
 
 
 fetchArtistData(artistId);

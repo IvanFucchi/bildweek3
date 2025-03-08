@@ -23,8 +23,8 @@
                     <div class="container-fluid p-0">
                         <header class="hero">
                             <div class="hero-overlay">
-                                <h1>Yellowcard</h1>
-                                <p>3.433.158 ascoltatori mensili</p>
+                                <h1></h1>
+                                <p></p>
                             </div>
                         </header>
                     </div>
@@ -56,41 +56,7 @@
                                     <h3>Popolari</h3>
                                     <table class="table table-dark table-hover">
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><img src="album1.jpg" alt="Album Cover" class="album-cover"></td>
-                                                <td>Ocean Avenue</td>
-                                                <td>#001</td>
-                                                <td>3:18</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td><img src="album2.jpg" alt="Album Cover" class="album-cover"></td>
-                                                <td>Only One</td>
-                                                <td>#002</td>
-                                                <td>4:17</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td><img src="album3.jpg" alt="Album Cover" class="album-cover"></td>
-                                                <td>Breathing</td>
-                                                <td>#003</td>
-                                                <td>3:38</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td><img src="album4.jpg" alt="Album Cover" class="album-cover"></td>
-                                                <td>Lights And Sounds</td>
-                                                <td>#004</td>
-                                                <td>3:28</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td><img src="album5.jpg" alt="Album Cover" class="album-cover"></td>
-                                                <td>Way Away</td>
-                                                <td>#005</td>
-                                                <td>3:22</td>
-                                            </tr>
+                                           
                                         </tbody>
                                     </table>
                                 </div>
@@ -121,7 +87,14 @@
 
             <div class="col-12 p-0" id="contMenuMobile">
 
-                <div id="barPlayback"></div>
+                <div id="barPlayback">
+                    <div id="barPlayback" class="player">
+                        <audio id="audioPlayer" controls>
+                            <source id="audioSource" src="" type="audio/mp3">
+                            Il tuo browser non supporta l'elemento audio.
+                        </audio>
+                    </div>
+                </div>
 
                 <div class="justify-content-around align-items-center p-2" id="menuMobile">
                     <a href="home.html">
