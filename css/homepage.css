@@ -1,0 +1,151 @@
+*{
+    color: #ffffff;
+    background-color: transparent;
+}
+
+a{
+    text-decoration: none;
+    font-size: 12px;
+}
+#headerMain{
+    display: flex;
+    justify-content: space-between;
+}
+#heroHome{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(22deg, rgba(8,8,8,1) 0%, rgb(23, 23, 23) 76%, rgba(31,31,31,1) 100%);
+}
+
+
+.spanHero{
+    font-size: 0.5em;
+}
+
+#heroHome p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+
+#heroHome button{
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.btnPlay{
+    color: black;
+    background-color: #1ED760;
+    border: none;
+}
+
+.btnSave{
+    color: #ffffff;
+    background-color: transparent;
+    border: 0.1px solid #ffffff43;
+}
+#listAlbum{
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+#listAlbum img, #heroHome img{
+    border-radius: 5px;
+}
+#listAlbum img{
+    width: 100%;
+}
+
+
+#listAlbum h6{
+    color: #ffffff;
+}
+
+
+#listAlbum .colMobile{
+    display: none;
+}
+
+#listAlbum span{
+    display: none;
+}
+
+#heroHome img{
+    width: 140px;
+    height: 140px;
+}
+
+#menuSettingMobile{
+    display: none;
+}
+
+@media (max-width: 1439px) {
+
+    #heroHome button{
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+
+    #heroHome p, button {
+        font-size: 0.7em;
+    }
+    #heroHome h2{
+        font-size: 1.6em;
+    }
+
+
+}
+
+
+@media (max-width:430px){
+    #heroHome{
+        display: none !important;
+    }
+
+    #listAlbum > *{
+        background-color: #242424;
+        border-radius: 10px;
+        text-align: start;
+    }
+    #listAlbum span{
+        display: block;
+    }
+
+    #listAlbum .colMobile{
+        display: flex;
+
+    }
+    #listAlbum .iconMobile button{
+        border: none;
+        font-size: 1.7em;
+    }
+    #listAlbum .playAlbum{
+        background-color: black;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.5em;
+    }
+
+    #menuSettingMobile{
+        display:flex;
+        justify-content: space-between;
+    }
+    #headerMain{
+        display: none;
+    }
+}
+
+
+#menuSettingMobile .dropdown-item{
+    color: #ffffff;
+}
+
+.dropdown button{
+    border: none;
+    font-size: 1.3em;
+}
+
+
+.like .bi{
+    color: #1ED760;
+}    
