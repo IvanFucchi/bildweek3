@@ -92,13 +92,36 @@
     padding: 3px 10px 3px 3px;
     font-size: 0.7em;
 }
+#activity p.nameUser{
+    font-weight:  bold;
+    margin: 0;
+    font-size: 12px;
+}
 
 #activity{
     color: #fff;
+    font-size: 60%;
 }
 #activity button{
     background-color: transparent;
     border: none;
     color: #fff;
     padding: 0;
+    font-size: 1em;
+}
+
+
+#friendsActivity img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+#friendsActivity{
+    color:#B2B2B2 ;
+}
+
+.hours{
+    text-align:end;
 }
