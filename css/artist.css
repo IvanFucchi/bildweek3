@@ -1,0 +1,303 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: auto;
+    background-color: black;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 0;
+    top: 0;
+}
+
+
+
+.hero-overlay {
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+.table {
+    background-color: none;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+
+.album-cover {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.artist-logo {
+    border-radius: 50%;
+    width: 70px;
+}
+
+.artist-info {
+    color: #6c757d;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    color: white;
+}
+
+#playBtn {
+    border-radius: 50%;
+    background-color: #1fd760;
+
+}
+
+.play-btn {
+    font-size: 2em;
+}
+
+.bi-play-fill {
+    color: black;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#followBtn {
+    border: solid;
+    border-radius: 5%, 5%, 5%, 5%;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 10px 20px;
+    /* Riduce l'altezza e aumenta la larghezza */
+    font-size: 12px;
+    font-weight: bolder;
+    height: 30px;
+    /* Altezza più schiacciata */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+#optionMenu {
+    color: white;
+}
+
+.table {
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    background-color: transparent !important;
+    border-collapse: collapse;
+}
+
+
+.table td {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 10px 0;
+}
+
+#contMain {
+    background: linear-gradient(to bottom,
+            rgba(40, 40, 40, 1) 0%,
+            rgba(20, 20, 20, 0.95) 30%,
+            rgba(10, 10, 10, 0.98) 70%,
+            rgba(5, 5, 5, 1) 100%);
+    background-repeat: repeat;
+
+}
+
+.bi-patch-check-fill {
+    color: cornflowerblue;
+    text: white
+}
+
+.hero h1 {
+    font-size: 80px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.option-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+
+.option-btn i {
+    margin-bottom: 12px;
+    font-size: 26px !important;
+    color: rgba(200, 200, 200, 0.7) !important;
+    transition: color 0.2s ease-in-out !important;
+}
+
+
+.option-btn:hover i {
+    color: white !important;
+}
+
+.option-btn i::before {
+    content: "⋅⋅⋅";
+    font-size: inherit;
+}
+
+
+@media (max-width: 992px) {
+
+    .col-md-3,
+    .col-md-7,
+    .col-md-2 {
+        min-width: 100%;
+    }
+
+    #menuSidebar {
+        display: none;
+    }
+}
+
+.player-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #181818;
+    color: white;
+    padding: 10px 20px;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+
+.track-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    /* margin-right: 10px; */
+    object-fit: cover;
+}
+
+.track-details h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.track-details p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.player-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#playerControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    width: 60%;
+}
+
+#playPauseBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#progressBar {
+    flex: 1;
+    margin: 0 10px;
+    background: white;
+    height: 3px;
+    border-radius: 5px;
+}
+
+#progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Controlli extra (a destra) */
+.extra-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#volumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#shuffleBtn,
+#repeatBtn {
+    color: #1fd760;
+}
